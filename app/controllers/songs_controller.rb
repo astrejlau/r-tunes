@@ -10,6 +10,14 @@ class SongsController < ApplicationController
             song.duration
             song.youtube_link
         end
+    end
 
+    def create
+        new_song = Song.new
+        new_song.album = params[:Album_id]
+        new_song.name = params[:name]
+        new_song.duration = params[:duration]
+        new_song.youtube_link = params[:youtube_link]
+        new_song.save
     end
 end

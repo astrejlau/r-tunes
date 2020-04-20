@@ -19,3 +19,11 @@
     color:darkslategray;
     background-color:rgb(240, 233, 220);
 }
+table, th, td {
+    border:1px grey;
+    border-collapse:collapse;
+}
+.album_art {
+    width:100px;
+    height:100px;
+}

@@ -1,18 +1,13 @@
 class AlbumsController < ApplicationController
+    #shows  you the form
     def new
     end
 
-    def index
+    def show
         @albums = Album.all
-        
-        @albums.each do |album|
-            album.title
-            album.artist
-            album.year
-            album.album_art
-        end
     end
 
+#takes what you put on the form puts info in the data base
     def create
         new_album = Album.new
         new_album.title = params[:title]

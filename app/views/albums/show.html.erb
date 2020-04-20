@@ -1,0 +1,20 @@
+<h1>Welcome to R-Tunes!</h1>
+
+<table>
+  <% @albums.each do |album| %>
+    <tr>
+      <td><%= album.artist %></td>
+      <td><%= album.title %></td>
+      <td><%= album.year %></td>
+      <td><img src="<%= album.album_art %>" class="album_art" alt="album art"></td>
+      <td><%= link_to 'Show', album_path(album) %></td>
+      <td><%= link_to 'Edit', edit_album_path(album) %></td>
+      <td><%= link_to 'Destroy', album_path(album),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </table>
+  <p>This should be displaying all the albums in our database, to link later to songs as well.</p>
+
+  <p><%= link_to 'Index', index_index_path %></p>
