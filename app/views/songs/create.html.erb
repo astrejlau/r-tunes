@@ -1,0 +1,26 @@
+<h1> Enter your new Song here: </h1>
+<%= form_with scope: :album, local: true do |form| %>
+    <p>
+        <%= form.label :album %><br>
+        <%= form.text_field :album %>
+    </p>
+
+    <p>
+        <%= form.label :name %><br>
+        <%= form.text_area :name %>
+    </p>
+
+     <p>
+        <%= form.label :duration %><br>
+        <%= form.text_area :duration %>
+    </p>
+
+     <p>
+        <%= form.label :youtube_link %><br>
+        <%= form.text_area :youtube_link %>
+    </p>
+
+    <p>
+        <%= form.submit %>
+    </p>
+<% end %>
